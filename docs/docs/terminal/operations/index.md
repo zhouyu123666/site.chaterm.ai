@@ -51,6 +51,24 @@ Search through terminal output to find commands, error messages, or any text.
 | Open Search     | `Cmd + F`     | `Ctrl + F`    |
 | Close Search    | `Esc`         | `Esc`         |
 
+## Quick Commands (Snippets)
+
+Quick commands let you save frequently used command flows and run them with one click.
+
+### What You Can Do
+
+- **Save reusable commands**: Store single commands or multi-line scripts.
+- **Group and organize**: Manage snippets by group for workflows like monitoring, deployment, or troubleshooting.
+- **Record macros**: Capture terminal actions and save them as snippets.
+- **Use script steps**: Add delays like `sleep==2000`, special keys (`tab`, `return`, `esc`, arrows), and control keys (`ctrl+c`).
+
+### Typical Workflow
+
+1. Open [Command Snippets](/docs/terminal/snippets/).
+2. Create a quick command with a name, group, and script content.
+3. Click run to send it to the active terminal.
+4. Refine snippets as your daily workflows evolve.
+
 ## Right-Click Menu Operations
 
 Right-click anywhere in the terminal to open the context menu.
@@ -100,4 +118,5 @@ For the full shortcut list, see [Shortcuts Settings](/docs/settings/shortcuts/).
 ## Related
 
 - [Terminal Management](/docs/terminal/manage/) -- tabs, cloning, and closing sessions.
+- [Command Snippets](/docs/terminal/snippets/) -- create, group, and run quick commands.
 - [Shortcuts Settings](/docs/settings/shortcuts/) -- view and customize all keyboard shortcuts.

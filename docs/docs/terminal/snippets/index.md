@@ -6,6 +6,10 @@ Save frequently used commands as reusable snippets and execute them with a singl
 
 ## How Snippets Work
 
+![Command Execution Demo](../../image/command-execution-demo-en.gif)
+
+## Using Command Snippets
+
 The snippet bar appears above the terminal input area. Each snippet displays a name and an execute button. Click the button to insert the command into the terminal, then press Enter to run it.
 
 ## Creating a Snippet
@@ -34,6 +38,12 @@ Here are practical snippets worth creating:
 | Docker Cleanup         | `docker system prune -af --volumes`                  | Remove unused Docker images, containers, and volumes |
 
 ## Macro Recording
+
+## Macro Recording
+
+![Macro Recording Demo](../../image/macro-recording-demo-en.gif)
+
+## Use Cases
 
 Instead of typing commands manually, you can record a sequence of terminal operations and save them as a snippet automatically.
 
