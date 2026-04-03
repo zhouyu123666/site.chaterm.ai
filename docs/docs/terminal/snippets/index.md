@@ -1,11 +1,6 @@
 # Command Snippets
 
 Save frequently used commands as reusable snippets and execute them with a single click from the terminal's snippet bar.
-
-![](../../image/snippets.png)
-
-## How Snippets Work
-
 ![Command Execution Demo](../../image/command-execution-demo-en.gif)
 
 ## Using Command Snippets
