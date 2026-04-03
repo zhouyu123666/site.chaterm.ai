@@ -34,8 +34,6 @@ Here are practical snippets worth creating:
 
 ## Macro Recording
 
-## Macro Recording
-
 ![Macro Recording Demo](../../image/macro-recording-demo-en.gif)
 
 ## Use Cases
