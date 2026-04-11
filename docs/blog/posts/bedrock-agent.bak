@@ -1,0 +1,208 @@
+---
+date: 2025-07-31
+title: 'Chaterm, an AI Agent built on Bedrock'
+author: Maisie Ouyang
+category: Technical
+tags:
+  - Chaterm
+  - Bedrock
+---
+
+This article details how to build a high-performance AI Agent for operations and maintenance: Chaterm. Through engineering and integration with AWS services, it revolutionizes traditional workflows.
+
+With the continuous development of AI technology and the ongoing innovation of AWS services, we believe Chatem will play an even more important role in the future, providing enterprises with a more intelligent, efficient, and secure experience.
+
+---
+
+## Background
+
+### In-depth Analysis of Pain Points in O&M Scenarios
+Current cloud computing and DevOps practices enable developers to manage hundreds or thousands of servers and containers, but the resulting O&M complexity has also increased dramatically. The core pain points faced by O&M engineers are mainly reflected in the following aspects:
+
+- Cumbersome batch operations: In large-scale distributed systems, O&M engineers often need to perform the same operations on hundreds of servers. Traditional tools such as AWS Systems Manager Agent (SSM Agent), while capable of batch processing of cluster machines, lack the support of large-scale models and have limited intelligence.
+
+- High Knowledge Barrier: The depth and breadth of the operations and maintenance (O&M) technology stack constitute a significant knowledge barrier. O&M personnel need to be proficient in multiple command-line tools, scripting languages, regular expressions, and system configuration. This full-stack knowledge requirement, from the operating system kernel to the application layer, means that novice engineers often need more than six months of practical experience to handle routine problems.
+
+- Complex Troubleshooting: In a microservice architecture, troubleshooting evolves into a complex distributed tracing challenge. When users report problems, O&M personnel need to retrieve hundreds of logs across the API gateway, order service, and payment service using the ELK Stack, and then correlate the call chain using Jaeger tracing IDs. This cross-service, cross-component log correlation analysis often requires senior engineers to spend several hours to pinpoint the specific problem.
+
+These pain points make DevOps' daily work tedious and high-pressure, urgently requiring an intelligent solution that can lower the barrier to entry, improve efficiency, and reduce risks.
+
+### Other Issues with Operations and Maintenance Products
+
+With the development of AI technology, various agent tools have emerged in the market attempting to address pain points in development and operations and maintenance. However, most suffer from the following limitations:
+
+- Limitations of General-Purpose AI Assistants: While general-purpose AI assistants can generate shell commands or configuration snippets, users need to switch back and forth between application software and terminals, copying and pasting commands, resulting in fragmented and inefficient workflows. These tools lack deep optimization for operations and maintenance scenarios and cannot directly connect to and manage remote servers.
+
+- Insufficient Intelligence in Traditional Terminal Tools: Traditional terminal tools such as Xshell and MobaXterm, while providing basic SSH connection and session management functions, lack AI capabilities and cannot understand natural language commands or automate complex task processes. Users still need to manually input precise commands and memorize numerous parameters and syntax.
+
+- Closed Nature of Cloud Platform Built-in Tools: Management tools provided by major cloud platforms are typically only applicable to their own ecosystems, making cross-platform and cross-cloud management difficult. This creates new management fragmentation problems in multi-cloud environments.
+
+In contrast, Chatem, as a smart terminal specifically designed for operations and maintenance (O&M) scenarios, offers the following unique advantages:
+
+- Deep O&M Scenario Adaptation: Chatem is deeply optimized for O&M needs and pain points, capable of understanding and executing complex O&M tasks such as service deployment, troubleshooting, and performance optimization.
+
+- Direct Terminal Integration: The AI ​​assistant is directly embedded into the application, supporting resource integration via SSH connection to remote servers. Specific commands can be executed directly within the machine terminal, eliminating the need to switch between multiple tools.
+
+- Flexible Multi-Mode Selection: Offers two interaction modes: Command and Agent, to meet different scenario requirements. Command mode is similar to "assisted driving," where AI assists the human in generating instructions; Agent mode is like "intelligent driving," where the human provides the goal, and the AI ​​autonomously plans and executes the task.
+
+- Enterprise-Grade Security Design: Employs enterprise-grade security mechanisms such as zero-trust authentication, workspace and permission management, and operation auditing to ensure that security is not sacrificed while improving efficiency.
+
+The emergence of Chaterm marks a shift in operations and maintenance tools from the "command-line era" to the "natural language era," providing operations and maintenance personnel with an experience similar to that of a programmer using Cursor.
+
+## Introduction and Architecture Design of Chaterm
+Chaterm is an open-source AI-powered intelligent terminal tool designed specifically for cloud resource management and operations and maintenance scenarios. It revolutionizes the way developers interact with terminals through natural language interaction. Chaterm employs a modern layered architecture to ensure high performance, security, and scalability:
+
+**Frontend Layer:**
+
+- A cross-platform desktop application built on Electron, providing a unified user interface and terminal experience.
+
+- Responsive UI components implemented with Vue and TypeScript, supporting theme customization and layout adjustments.
+
+- Integrated Monaco editor providing code highlighting and intelligent suggestions.
+
+**Middleware Layer:**
+
+- SSH connection management module: Responsible for establishing and maintaining secure connections with remote servers.
+
+- Session management system: Handles the creation, switching, and persistence of multi-terminal sessions.
+
+- Command parsing engine: Analyzes user input, extracting intent and parameters.
+
+- AI agent coordinator: Schedules different processing flows based on the user-selected mode (Chat/Command/Agent).
+
+**Backend Services:**
+
+- AI model interface: Integrates with AI service providers such as OpenAI and Amazon Bedrock.
+
+- Credential management system: Securely stores and manages sensitive information such as SSH keys and API tokens.
+
+- Log and telemetry system: Collects operation logs and performance metrics, supporting auditing and optimization.
+
+- Plugin system: Supports extended functionality, such as custom tools and integrations.
+
+**Data Storage:**
+
+- Local encrypted storage: Saves user configurations, session history, and credential information.
+
+- Optional cloud synchronization: Supports secure synchronization of configurations and sessions across multiple devices.
+
+**Security Layers:**
+
+- End-to-end encryption: Protects all communication content.
+
+- Access control system: Role-based access control.
+
+- Audit logs: Records all critical operations.
+
+This architectural design enables Chatem to provide powerful functionality while ensuring high security and scalability, meeting the needs of everyone from individual developers to large enterprise teams.
+
+## Specific Practices of Core Technology Breakthroughs
+
+### Agent Design and Optimization
+Chaterm's Agent mode is one of its most innovative features, elevating AI from a simple command generator to a true operations and maintenance assistant. The core concept of Agent design is "goal-oriented" rather than "command-oriented." Users only need to describe the goals they want to achieve, and the Agent will autonomously plan and execute the necessary steps.
+
+Technical Optimization of System Prompt Engineering:
+Chaterm's Agent is based on carefully designed system prompts, enabling AI to accurately understand operations and maintenance scenarios. We position the Agent as a "senior operations expert with 20 years of experience," possessing expertise in network security, troubleshooting, performance optimization, and other areas, as well as strong problem-solving capabilities. This role allows the Agent to think from the perspective of a professional operations engineer, providing solutions that better align with best practices.
+
+Task Planning and Execution Engine: We have meticulously optimized task planning, enabling the Agent to automatically break down complex tasks into a series of logical steps. For example, when a user requests to "deploy a Java + Vue + MySQL front-end and back-end web project environment," the Agent will automatically plan steps such as checking system versions, installing JDK, installing Node.js, installing MySQL, and configuring the database, executing them in the correct dependency order.
+
+Adaptive Execution and Error Recovery Mechanism: Unlike simple script execution, the Agent is adaptive, dynamically adjusting subsequent plans based on the results of each step. When encountering errors, the Agent attempts to understand the cause, provides solutions, and adjusts the execution path if necessary. For example, if a package installation fails, the Agent will automatically check for source configuration issues, network problems, or version compatibility issues, and take appropriate measures.
+
+Context Awareness and State Management: We have deeply optimized the context awareness and state management of the Chatterm agent. First, the agent maintains context information during execution, ensuring subsequent operations are based on previous results, and provides context-aware windows for alerts and appropriate overflow prevention mechanisms. In terms of task management, Chatterm supports task resumption and continuation. We have also optimized context management through various methods, such as building a context tracker, marking and processing duplicate content in the context, and intelligent truncation.
+
+### Tool System Design and Optimization: The tool system is the core support for Chatterm Agent's capabilities, enabling AI to interact securely and efficiently with the operating system and various tools.
+
+Tool Permissions and User Permission Confirmation: Chatterm implements a fine-grained tool permission control system. Each tool call includes a `requires_approval` parameter, indicating whether user confirmation is required for the operation. High-risk operations (such as deleting files, modifying system configurations, and network operations) require user approval by default, while low-risk operations (such as reading files and querying status) can be executed automatically. This design balances automation efficiency and operational security.
+
+Command Security Checks:
+
+Chaterm performs multiple security checks before executing any command:
+
+1. Syntax Check: Ensures correct command formatting, preventing unexpected results due to syntax errors.
+
+2. Permission Check: Verifies whether the current user has permission to execute the command.
+
+3. Risk Assessment: Analyzes the potential impact of the command and provides additional warnings for high-risk commands (such as recursive deletion).
+
+4. Sandbox Pre-execution: Pre-executes certain commands in an isolated environment to assess their impact.
+
+This multi-layered context management enables the Agent to provide a consistent interactive experience, maintaining state consistency even in complex, multi-step tasks.
+
+### AI Gateway Design and Optimization
+
+We built an enterprise-grade AI Gateway to implement model management and intelligent routing, providing users with flexible and efficient AI services.
+
+Multi-Model Support and Management:
+
+Through the AI ​​Gateway, users can quickly and seamlessly switch to different models as needed. The AI ​​Gateway is responsible for the unified management of these models, providing a consistent interface and experience.
+
+### Agent Observability Construction, Evaluation, and Optimization
+Chaterm, built on Amazon Web Services (EKS), provides a real-time agent observability system for comprehensive monitoring, evaluation, and continuous optimization of agent behavior.
+
+End-to-End Tracking: The entire agent execution process is recorded, with each step recorded as a tracking point, including input, output, execution time, and resource consumption.
+
+Performance Metric Monitoring: The system collects multi-dimensional performance metrics, including:
+
+1. Response Time: The time from user input to agent response.
+
+2. Execution Accuracy: The degree to which the agent's execution results match the expected goals.
+
+3. Token Usage: Token consumption for different models and task types.
+
+4. Error Rate: The error occurrence rate and type distribution during agent execution.
+
+Agent Evaluation and Optimization: We comprehensively evaluate and continuously optimize agent capabilities through end-to-end agent evaluation methods and core component-level agent evaluation methods.
+
+End-to-end agent evaluation methods include task completion, the toxicity, illusion, and quality of generated content. The core component-level agent evaluation methodology includes assessments of complex task decomposition capabilities and thinking quality, as well as tool usage efficiency and accuracy. Agent capabilities are continuously optimized based on the evaluation results.
+
+### Inference Speed ​​Optimization
+Chaterm leverages multiple technologies provided by Amazon Bedrock to optimize inference speed, significantly improving the user experience.
+
+Bedrock Prompt Router: We implemented dynamic model routing to provide users with the most cost-effective experience while maintaining consistent quality. Chaterm automatically selects the most suitable model based on the complexity of user commands, context length, and task type, predicting quality scores, latency, and costs.
+
+Bedrock Prompt Cache: Chaterm also utilizes Amazon Bedrock's prompt caching feature to cache frequently used prompts, further reducing latency and cost. In operational scenarios, static content such as system prompts and tool definitions consumes a large number of tokens. Caching this content significantly reduces the Time To First Token (TTFT) for each request, thereby optimizing and improving overall inference speed.
+
+## Considerations for Enterprise-Level Operations and Maintenance Scenarios
+
+### Usage Strategies in Private Subnet Environments
+
+For enterprise-level operations and maintenance teams, production environments are typically deployed in private subnets and accessed via bastion hosts. In this architecture, the use of Chatem requires special consideration:
+
+Command Mode vs. Agent Mode: In a private subnet environment, due to network isolation, Agent mode may face connection limitations. In this case, Command mode becomes a more practical choice. Users can connect to servers in the private subnet through a bastion host, then use Chatem's Command mode to generate commands, which are then executed in the current session after user confirmation.
+
+Jump Host Configuration: Chatem supports configuring SSH jump hosts (Jump Hosts), using ProxyCommand or ProxyJump functions to connect to servers in the private subnet through the bastion host. This maintains a good user experience even in environments with strict network isolation.
+
+Local Model Deployment: For enterprises with high security requirements, deploying local LLM models on the intranet can be considered to prevent sensitive information from being leaked. Chatem supports connecting to locally deployed model services, ensuring that data does not leave the enterprise boundary.
+
+### Database Management Scenario Adaptation
+
+Chaterm is not only suitable for server management but also effectively supports database operation and maintenance scenarios:
+
+Self-built Database Support: For self-built databases (such as MySQL, PostgreSQL, MongoDB, etc.), Chatterm can directly connect to the database server via SSH to execute database commands, analyze performance issues, optimize queries, and perform other operations.
+
+AWS Managed Database Support: For managed database services such as AWS RDS, Chatterm provides support in the following ways:
+
+1. Connect to an EC2 instance with database access permissions, using the instance as a springboard to access RDS.
+
+2. Use AWS CLI commands to manage the configuration, parameter groups, snapshots, etc., of RDS instances.
+
+3. Connect to RDS through database client tools to execute SQL queries and management operations.
+
+Database Performance Optimization: Chatterm's AI capabilities excel in database performance optimization. It can analyze slow query logs, provide index optimization suggestions, identify connection bottlenecks, and help DBAs quickly resolve performance issues.
+
+## Future Development Direction
+
+Chaterm, as an operations and maintenance (O&M) version of Cursor, will focus on the following future development directions:
+
+Voice Control Functionality: Plans include launching voice command functionality for mobile devices, enabling users to efficiently control servers and cloud resources via voice even in non-office scenarios (including mobile office scenarios). This will further lower the O&M threshold, realizing the vision of completing complex O&M processes simply by speaking.
+
+Multi-Cloud Management Capabilities: Expand native support for multi-cloud environments such as AWS, Azure, and Google Cloud, providing a unified multi-cloud management interface and experience. Users can use the same natural language commands to perform similar operations on different cloud platforms without switching tools or remembering command differences between platforms.
+
+Enhanced Team Collaboration: Enhance team collaboration capabilities to support enterprise-level needs such as O&M knowledge sharing, operation auditing, and access control. Team members can share custom command templates, O&M scripts, and best practices to form an organizational-level O&M knowledge base.
+
+Automated Scenario Orchestration: Develop more advanced automated scenario orchestration capabilities, allowing users to define complex O&M workflows and trigger execution via natural language. For example, users can define a "version release" scenario that includes a series of steps such as code deployment, database migration, service restart, and health checks, and then trigger the entire process with a single command.
+
+## Reference
+- Website：https://chaterm.ai/
+- Github：https://github.com/chaterm/Chaterm
+
