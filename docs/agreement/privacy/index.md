@@ -103,7 +103,7 @@ We do not share Personal Data to third parties except as specified below, or whe
 
 (a)Affiliates. We share Personal Data within our group of companies, for use in accordance with this Policy.
 
-(b)Service providers. We engage service providers to provide services to support or improve our business. These service providers are required to provide the same or equal protection of Personal Data as stated in this Policy and are prohibited from retaining, using, or disclosing Personal Data except as necessary to provide services to us. To protect the security of your data, we encourage you to review the privacy policies of every Third-party Service that you visit or use, including those third parties you interact with through our services. You can learn more about Third-party Services in Chaterm by clicking HYPERLINK "https://static-cdn-p.chaterm.cn/policy/c_app/extra_privacy_en-us.html" \t "_blank" [List of Third Parties].
+(b)Service providers. We engage service providers to provide services to support or improve our business. These service providers are required to provide the same or equal protection of Personal Data as stated in this Policy and are prohibited from retaining, using, or disclosing Personal Data except as necessary to provide services to us. To protect the security of your data, we encourage you to review the privacy policies of every Third-party Service that you visit or use, including those third parties you interact with through our services. You can learn more about Third-party Services in Chaterm by clicking [List of Third Parties](https://static-cdn-p.chaterm.cn/policy/c_app/extra_privacy_en-us.html).
 
 (c)Asset transfer. In the event of a merger, acquisition or bankruptcy liquidation, asset transfer and other related transaction, if a Personal Data transfer is involved, any new entity or organization receiving Personal Data will continue to be bound by this Policy through an agreement or other appropriate measures.
 
@@ -143,7 +143,7 @@ Our services are not intended for anyone under 16 (or otherwise provided by the 
 
 To bring you Our Services, we operate globally and we will comply with the applicable data protection laws and regulations in your country/territory to collect, use and process your personal data. For example, if you are a resident of California, we will process and store your personal data(such as the documents and images you upload)only in the United States. In connection with the purposes described herein, where necessary to provide our services, we may transfer your personal data to countries/territories outside your countries/territories, we will take appropriate safeguards to ensure that your personal information will remain protected in accordance with this Privacy Policy.
 
-When transferring data from the European Economic Area (EEA), the United Kingdom, or Switzerland to non-EEA countries,, we rely on one or more of the following legal mechanisms: Standard Contractual Clauses, and the European Commission's HYPERLINK "https://ec.europa.eu/info/law/law-topic/data-protection/international-dimension-data-protection/adequacy-decisions_en" adequacy decisions about certain countries, as applicable.
+When transferring data from the European Economic Area (EEA), the United Kingdom, or Switzerland to non-EEA countries,, we rely on one or more of the following legal mechanisms: Standard Contractual Clauses, and the European Commission's [adequacy decisions](https://ec.europa.eu/info/law/law-topic/data-protection/international-dimension-data-protection/adequacy-decisions_en) about certain countries, as applicable.
 
 9.Change to This Privacy Policy
 
@@ -253,7 +253,7 @@ c. Necessary for compliance with a legal obligation to which we are subject (Art
 
 How do we comply with data transfer rules?
 
-When transferring data from the European Economic Area (EEA), the United Kingdom, or Switzerland to non-EEA countries,, we rely on one or more of the following legal mechanisms: Standard Contractual Clauses, and the European Commission's HYPERLINK "https://ec.europa.eu/info/law/law-topic/data-protection/international-dimension-data-protection/adequacy-decisions_en" adequacy decisions about certain countries, as applicable.
+When transferring data from the European Economic Area (EEA), the United Kingdom, or Switzerland to non-EEA countries,, we rely on one or more of the following legal mechanisms: Standard Contractual Clauses, and the European Commission's [adequacy decisions](https://ec.europa.eu/info/law/law-topic/data-protection/international-dimension-data-protection/adequacy-decisions_en) about certain countries, as applicable.
 
 How to contact us?
 
