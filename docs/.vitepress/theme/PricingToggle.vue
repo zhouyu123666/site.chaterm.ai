@@ -70,8 +70,6 @@
       </div>
     </div>
 
-    <div class="pricing-note" v-if="billingCycle === 'yearly'">Billed yearly. Auto-renewing subscription. Cancel anytime.</div>
-    <div class="pricing-note" v-else>Billed monthly. Auto-renewing subscription. Cancel anytime.</div>
   </div>
 </template>
 
