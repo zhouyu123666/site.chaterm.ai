@@ -156,7 +156,7 @@ gtag('config', 'G-K3CWHYW67E');
         ],
 
         footer: {
-          message: '<a href="https://www.gnu.org/licenses/gpl-3.0.html">License</a> ｜ Contact: <a href="mailto:support@chaterm.ai">support@chaterm.ai</a> ｜ <a href="/service/">Terms of Service</a>',
+          message: '<a href="/agreement/user/">Terms of Service</a> ｜ <a href="/agreement/privacy/">Privacy Policy</a> ｜ <a href="https://www.gnu.org/licenses/gpl-3.0.html">License</a> ｜ Contact: <a href="mailto:support@chaterm.ai">support@chaterm.ai</a>',
           copyright: `Copyright © ${new Date().getFullYear()} All rights reserved`
         },
         socialLinks: [
