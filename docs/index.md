@@ -570,6 +570,7 @@ hero:
 
 <!-- Video / Agent Section -->
 <div class="container">
+  <DevHuntBanner />
   <br>
   <center>
     <div class="agent-media ">
